@@ -1,20 +1,12 @@
-# 🛠 Constructors & Destructors in C++
+Constructors & Destructors in C++
 
----
-
-## 🎯 Aim  
+Aim  
 To understand, use, and implement **C++ Constructors** and **Destructors**, exploring their role in **object initialization**, **cleanup**, and **lifecycle management**.
 
----
-
-## 📚 Theory  
-
+Theory  
 In C++, **constructors** and **destructors** are special member functions that manage the **lifecycle of an object** — from creation to destruction.
 
----
-
-### 🏗️ Constructor  
-
+Constructor  
 A **constructor** is a special member function that is **automatically invoked** when an object of a class is created.  
 Its main purpose is to **initialize the object’s data members** and ensure it starts in a valid state.
 
@@ -32,10 +24,7 @@ Its main purpose is to **initialize the object’s data members** and ensure it 
 4. **Delegating Constructor** *(C++11+)* – Calls another constructor in the same class.
 5. **Explicit Constructor** – Prevents implicit conversions.
 
----
-
-### 🗑️ Destructor  
-
+Destructor  
 A **destructor** is a special member function that is **automatically invoked** when an object’s lifetime ends.  
 Its main purpose is to **release resources** acquired during the object’s existence.
 
@@ -56,10 +45,7 @@ Its main purpose is to **release resources** acquired during the object’s exis
 - Global/static objects: destroyed in reverse order of construction at program termination.
 - Inheritance: derived class destructor runs first, then base class destructor.
 
----
-
-### 🔄 Constructor–Destructor Lifecycle  
-
+Constructor–Destructor Lifecycle  
 1. **Memory Allocation** (if dynamic).
 2. **Constructor Call** → Initialization.
 3. **Object Usage** → Program logic.
@@ -68,12 +54,8 @@ Its main purpose is to **release resources** acquired during the object’s exis
 
 This follows the **RAII** principle (*Resource Acquisition Is Initialization*), ensuring safe and automatic resource management.
 
----
-
-## 📋 Algorithms  
-
-### 🧾 Destructor with Global Counter  
-
+Algorithms  
+Destructor with Global Counter  
 1. **Start**  
 2. Declare a global integer `count = 0` to track the number of objects.  
 3. Define a class `Student` with:  
@@ -87,10 +69,7 @@ This follows the **RAII** principle (*Resource Acquisition Is Initialization*), 
    - At the end of `main()`, `cc`, `bb`, and `aa` are destroyed in reverse order.  
 5. **End**
 
----
-
-### 📋 Copy Constructor  
-
+Copy Constructor  
 1. **Start**  
 2. Define a class `Student` with private members: `name`, `age`, `roll_no`.  
 3. Create a parameterized constructor to initialize these members.  
@@ -105,10 +84,7 @@ This follows the **RAII** principle (*Resource Acquisition Is Initialization*), 
    - Display `s2`’s details.  
 7. **End**
 
----
-
-### 📅 Parameterized Constructor
-
+Parameterized Constructor
 1. **Start**  
 2. Define a class `Date` with private members: `d`, `m`, `y`.  
 3. Create a parameterized constructor that:  
@@ -121,10 +97,7 @@ This follows the **RAII** principle (*Resource Acquisition Is Initialization*), 
    - Call `display()` to show the date.  
 6. **End**
 
----
-
-### 🧑‍🎓 Default Constructor
-
+Default Constructor
 1. **Start**  
 2. Define a class `Student` with private members: `name`, `fee`.  
 3. Create a default constructor that:  
@@ -137,10 +110,7 @@ This follows the **RAII** principle (*Resource Acquisition Is Initialization*), 
    - Call `display()` to show the details.  
 6. **End**
 
----
-
-### 🔄 Basic Constructor & Destructor Lifecycle  
-
+Basic Constructor & Destructor Lifecycle  
 1. **Start**  
 2. Define a class with:  
    - **Constructor:** Displays a message when an object is created.  
@@ -151,15 +121,12 @@ This follows the **RAII** principle (*Resource Acquisition Is Initialization*), 
    - Observe that destructors are called in reverse order of creation.  
 4. **End**
 
----
-
-## 🧠 Conclusion  
-
+Conclusion  
 This experiment demonstrates the importance of **constructors and destructors** in managing the lifecycle of C++ objects.  
 
-- 🏗️ **Constructors** → Ensure proper initialization.  
-- 🗑️ **Destructors** → Ensure proper cleanup.  
-- ✅ Key Insights:  
+- **Constructors** → Ensure proper initialization.  
+- **Destructors** → Ensure proper cleanup.  
+- Key Insights:  
   - Different constructor types serve different initialization needs.  
   - Destructors are crucial for resource management.  
   - Together, they implement **RAII** for safer, cleaner code.
